@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="huabu"></canvas>
+    <script>
+        // var huabu = document.getElementById('huabu')
+        //querySelector与querySelectorAll是H5提供的选择器
+        // 1. querySelector只能选择第一个匹配的节点
+        // 2. querySelectorAll可以选择多个节点,以","分隔开,返回的是个数组
+        var huabu = document.querySelector('#huabu')
+        var tools = huabu.getContext('2d')
+            //moveTo起点（x,y）
+            //lineTo终点（x,y）
+            //默认2px的线
+        tools.moveTo(100, 100)
+        tools.lineTo(200, 100)
+            //绘制1px的线
+        tools.moveTo(100, 120.5)
+        tools.lineTo(200, 120.5)
+
+        tools.moveTo(120.5, 100)
+        tools.lineTo(120.5, 200)
+        tools.stroke()
+    </script>
+</body>
+
+</html>
